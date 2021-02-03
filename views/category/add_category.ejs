@@ -1,0 +1,43 @@
+<%- include('../header') %>
+      <div class="container">
+        <div class="row">
+          <div class="panel panel-info col-md-10 offset-md-2">
+            <div class="panel-heading" style="margin-bottom: 20px;">
+              <div class="panel-title h2 text-info">Add Password Category </div>
+            </div>
+            <div class="panel-body">
+              <form action="/category/add-new-category" method="post" id="signupForm" class="form-horizontal" role="form" autocomplete="false">
+                <input type="text" name="_id" style="display: none;" value="<%= category._id %>">
+                <div class="form-group">
+                  <label for="cname">Category Name</label>
+                  <div class="col-md-9">
+                    <input type="text" name="cname" class="form-control" placeholder="Enter Category Name" value="<%= category.cname %>">
+                    <%if(errors != ''){ %>
+                      <span class="text-danger">
+                        <%= errors.cname.msg %>
+                      </span>
+                    <% } %>
+                    
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <% if(category._id){ %>
+                    <button type="submit" class="btn btn-info">Update</button>
+                  <% }else{ %>
+                    <button type="submit" class="btn btn-info">Add</button>
+                  <% } %>
+                  
+                </div>
+                <p>
+                  View All Categories
+                  <a href="/category/passwordCategory" style="text-decoration: none;">Click Here</a>
+                </p>
+              </form>
+            </div> 
+          </div>
+        </div>
+      </div>
+
+  </body>
+</html>

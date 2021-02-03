@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+  </head>
+  <body>
+      
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-bottom: 30px;">
+        <a class="navbar-brand title" href="/dashboard"><%=  title %></a>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/category/add-new-category">Add Cat</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/category/passwordCategory">View Cat</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/password/passwordDetail">View Details</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/password/add-new-password">Add Pass</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/logout">LogOut</a>
+              </li>
+          </ul>
+          <div class="navbar-header" style="float: right;">
+            <a href="#" style="text-decoration: none;" class="h3"> 
+                Hello ... <% if(loginUser) { %> <%= loginUser %> <% } %>
+            </a>
+          </div>
+        </div>
+      </nav>
